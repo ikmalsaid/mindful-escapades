@@ -98,7 +98,7 @@ def story_generator(message, chatbot, image_style, voice_style):
     if status != "Ongoing":
         return gr.Textbox(visible=False), gr.Button(visible=False), gr.Markdown(visible=True), chatbot, image, title, sentiment, status, voice
     
-    return "", None, None, chatbot, image, title, sentiment, status, voice
+    return "", gr.Button(visible=True), None, chatbot, image, title, sentiment, status, voice
 
 def voice_generator(text_prompt, voice):
     style = {
