@@ -1,3 +1,2 @@
 # mindful-escapades
-A journey like no other powered by Google Gemini.
-#buildwithgemini
+Turn your words into playable adventures! #builtwithgemini
