@@ -10,7 +10,7 @@ import dotenv
 import os
 import re
 
-dotenv.load_dotenv(".env2")
+dotenv.load_dotenv(".env")
 gemini.configure(api_key=os.environ["GEMINI_KEY"])
 gemini_project_name = "Mindful Escapades"
 
