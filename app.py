@@ -172,6 +172,10 @@ css = '''
     font-size: 16px;
     text-align: center;
 }
+
+footer {
+    display: none !important;
+}
 '''
 
 welcome_text = f'''
