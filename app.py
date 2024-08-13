@@ -231,7 +231,7 @@ with gr.Blocks(analytics_enabled=False, css=css, theme=system_theme, title=gemin
                 gr.Markdown("<center>More Options")
                 adv_clear = gr.Button(value="Reset All", variant='stop')
 
-                gr.Markdown("<center>Running in <b>Single Mode</b><br>Press 'Reset All' to restart a new story.")
+                gr.Markdown("<center>Running in <b>Single Session Mode</b><br>Press 'Reset All' to restart a new story.")
                 
             with gr.Column(variant="panel", scale=3) as result:
                 adv_chatbox = gr.Chatbot(height=939.23, placeholder=welcome_text, label="Storyteller")
