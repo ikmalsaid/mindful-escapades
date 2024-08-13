@@ -15,5 +15,5 @@ Overall, Gemini API enhances the roleplaying experience by seamlessly integratin
 - Step 4: Reply to the response by repeating steps 1 to 3.
 
 ## Tips and Release Notes
-- Tip: You can also change the image style and the type of voice according to your preferences.
-- Note: This app runs in single mode. If you encounter a weird behavior, you can restart the story by pressing the 'Reset All' button.
+- You can always change the image style and the type of voice according to your preferences.
+- This app runs in single mode. If you encounter a weird behavior, you can restart the story by pressing the 'Reset All' button.
