@@ -174,7 +174,8 @@ footer {
 
 welcome_text = f'''
 # 💬 {gemini_project_name}
-### Begin your story by imagining a topic or genre!
+### Turn your words into playable adventures! #builtwithgemini
+### Designed by [@ikmalsaid](https://github.com/ikmalsaid/)
 '''
 
 with gr.Blocks(analytics_enabled=False, css=css, theme=system_theme, title=gemini_project_name) as demo:
