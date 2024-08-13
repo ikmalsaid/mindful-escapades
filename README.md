@@ -20,6 +20,7 @@ Overall, Gemini API enhances the roleplaying experience by seamlessly integratin
   - Create a copy of the `.env.example` file and rename it to `.env`
   - Fill in the required information inside the `.env` file
   - Launch the app using: `python app.py`
+  - Wait for the browser window to open.
 
 ## How to Use
 - Step 1: Type what kind of story that you want in the textbox at the lower part of the app.
