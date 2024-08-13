@@ -143,12 +143,6 @@ def image_generator(image_prompt, style):
     if response.status_code == 200:
         content = response.content
         
-        error_json = json.load(open("presets/Error.json", encoding="utf-8"))
-        error_array = BytesIO(base64.b64decode(error_json["error"]["data"])).read()
-        
-        if content == error_array:
-            return None
-        
         with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as temp_file:
             temp_file.write(content)
         
