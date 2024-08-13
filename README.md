@@ -9,7 +9,7 @@ With Gemini API, players can explore a wide variety of genres and scenarios, fro
 Overall, Gemini API enhances the roleplaying experience by seamlessly integrating text generation, image creation and sentiment analysis, making it an invaluable resource for developers looking to create captivating and responsive storytelling applications. The possibilities for adventure are truly endless, limited only by the imagination of the players.
 
 ## Setup Guide
-- You can always try the online demo hosted on HuggingFace through [here](https://ikmalsaid-mindful-escapades.hf.space/)
+- You can always try the online demo hosted on HuggingFace through [here](https://ikmalsaid-mindful-escapades.hf.space/).
 - Local installation is supported but you need to provide your own:
   - Gemini API key.
   - Image generation provider URL.
