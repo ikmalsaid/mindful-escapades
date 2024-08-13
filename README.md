@@ -29,4 +29,5 @@ Overall, Gemini API enhances the roleplaying experience by seamlessly integratin
 
 ## Tips and Release Notes
 - You can always change the image style and the type of voice according to your preferences.
-- This app currently allows only one user to be active at a time. If you encounter any problems, click the 'Reset All' button to start a new story.
+- This app currently allows only one user to be active at a time.
+- If you encounter any problems, click the 'Reset All' button to start a new story.
