@@ -29,4 +29,4 @@ Overall, Gemini API enhances the roleplaying experience by seamlessly integratin
 
 ## Tips and Release Notes
 - You can always change the image style and the type of voice according to your preferences.
-- This app currently supports only a single session, so multi-session functionality is unavailable. If you encounter any issues, press the 'Reset All' button to start a new story.
+- This app supports only one user session at a time, for now. If you experience any issues, press the 'Reset All' button to begin a new story.
