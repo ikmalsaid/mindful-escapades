@@ -86,7 +86,7 @@ def story_generator(message, chatbot, image_style, voice_style):
     image_prompt = bot_message.get('image_prompt', '')
     
     dialog = f"### Current State:\n{dialog_prompt}\n"
-    if good_choice and bad_choice and whacky_choice:
+    if status == "Ongoing" and good_choice and bad_choice and whacky_choice:
         dialog += f"\n### Suggested Choices:\n1. {good_choice}\n2. {bad_choice}\n3. {whacky_choice}\n"
     
     image = image_generator(image_prompt, image_style)
@@ -98,7 +98,7 @@ def story_generator(message, chatbot, image_style, voice_style):
     if status != "Ongoing":
         return gr.Textbox(visible=False), gr.Button(visible=False), chatbot, image, title, sentiment, status, voice
     
-    return "", None, chatbot, image, title, sentiment, status, voice
+    return "", gr.Button(), chatbot, image, title, sentiment, status, voice
 
 def voice_generator(text_prompt, voice):
     style = {
