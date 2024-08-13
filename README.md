@@ -16,12 +16,6 @@ Overall, Gemini API enhances the roleplaying experience by seamlessly integratin
   - Image generation provider API key.
 - Once acquired, follow these steps:
   - Clone this repository: `git clone https://github.com/ikmalsaid/mindful-escapades.git`
-  - Install the `virtualenv` Python package: `python -m pip install virtualenv`
-  - Create a new Python environment: `python -m venv venv`
-  - Activate the newly created environment:
-    - Windows: `.\venv\Scripts\activate`
-    - Linux: `source venv/bin/activate`
-    - macOS: `source venv/bin/activate` or `source myenv/bin/activate.csh`
   - Install the required Python packages: `python -m pip install -r requirements.txt`
   - Create a copy of the `.env.example` file and rename it to `.env`
   - Fill in the required information inside the `.env` file
@@ -35,4 +29,4 @@ Overall, Gemini API enhances the roleplaying experience by seamlessly integratin
 
 ## Tips and Release Notes
 - You can always change the image style and the type of voice according to your preferences.
-- This app operates in single mode. To restart a new story if you experience any strange behavior, press the 'Reset All' button.
+- This app operates in single session mode, for now. Therefore, multi-session support is not available. To restart a new story if you experience any strange behavior, press the 'Reset All' button.
