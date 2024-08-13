@@ -10,7 +10,7 @@ import dotenv
 import os
 import re
 
-dotenv.load_dotenv(".env")
+dotenv.load_dotenv()
 gemini.configure(api_key=os.environ["GEMINI_KEY"])
 gemini_project_name = "Mindful Escapades"
 
@@ -69,7 +69,7 @@ def title_caps(string):
 def reset_chat():
     global player_story
     player_story = gemini_model.start_chat()
-    return gr.Textbox(value="", visible=True), gr.Button(visible=True), gr.Markdown(visible=False), None, None, "-", "-", "-", None
+    return gr.Textbox(value="", visible=True), gr.Button(visible=True), None, None, "-", "-", "-", None
     
 def story_generator(message, chatbot, image_style, voice_style):
     response = player_story.send_message(str(message))
@@ -96,9 +96,9 @@ def story_generator(message, chatbot, image_style, voice_style):
     chatbot.append((message, dialog))
     
     if status != "Ongoing":
-        return gr.Textbox(visible=False), gr.Button(visible=False), gr.Markdown(visible=True), chatbot, image, title, sentiment, status, voice
+        return gr.Textbox(visible=False), gr.Button(visible=False), chatbot, image, title, sentiment, status, voice
     
-    return "", gr.Button(visible=True), None, chatbot, image, title, sentiment, status, voice
+    return "", None, chatbot, image, title, sentiment, status, voice
 
 def voice_generator(text_prompt, voice):
     style = {
@@ -142,6 +142,12 @@ def image_generator(image_prompt, style):
     
     if response.status_code == 200:
         content = response.content
+        
+        error_json = json.load(open("presets/Error.json", encoding="utf-8"))
+        error_array = BytesIO(base64.b64decode(error_json["error"]["data"])).read()
+        
+        if content == error_array:
+            return None
         
         with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as temp_file:
             temp_file.write(content)
@@ -230,7 +236,8 @@ with gr.Blocks(analytics_enabled=False, css=css, theme=system_theme, title=gemin
                 gr.Markdown("<center>More Options")
                 adv_clear = gr.Button(value="Reset All", variant='stop')
 
-            
+                gr.Markdown("<center>Running in <b>Single Mode</b><br>Press 'Reset All' to restart a new story.")
+                
             with gr.Column(variant="panel", scale=3) as result:
                 adv_chatbox = gr.Chatbot(height=939.23, placeholder=welcome_text, label="Storyteller")
                 
@@ -238,7 +245,6 @@ with gr.Blocks(analytics_enabled=False, css=css, theme=system_theme, title=gemin
                     adv_textbox = gr.Textbox(max_lines=1, placeholder="Type anything...", container=False, scale=4)
                     adv_submit = gr.Button("🚀 Send", scale=1)
                 
-                adv_ended = gr.Markdown(f"<center>Thanks for playing! You can press the 'Reset All' button to play again.", visible=False)    
                 adv_disclaimer = gr.Markdown(f"<center>{gemini_project_name} can make mistakes. Check important info.")
             
             adv_clear.click(
@@ -247,7 +253,6 @@ with gr.Blocks(analytics_enabled=False, css=css, theme=system_theme, title=gemin
                 [
                     adv_textbox,
                     adv_submit,
-                    adv_ended,
                     adv_chatbox,
                     adv_image,
                     adv_title,
@@ -270,7 +275,6 @@ with gr.Blocks(analytics_enabled=False, css=css, theme=system_theme, title=gemin
                 [
                     adv_textbox,
                     adv_submit,
-                    adv_ended,
                     adv_chatbox,
                     adv_image,
                     adv_title,
@@ -293,7 +297,6 @@ with gr.Blocks(analytics_enabled=False, css=css, theme=system_theme, title=gemin
                 [
                     adv_textbox,
                     adv_submit,
-                    adv_ended,
                     adv_chatbox,
                     adv_image,
                     adv_title,
