@@ -1,4 +1,4 @@
-# mindful-escapades
+# 💬 Mindful Escapades
 Turn your words into playable adventures! #builtwithgemini
 
 ## How Gemini API Empowers This App
@@ -6,7 +6,20 @@ Gemini API is a powerful tool that drives a web application designed for creatin
 
 With Gemini API, players can explore a wide variety of genres and scenarios, from fantasy quests to sci-fi explorations, ensuring that each adventure is unique and tailored to individual preferences. The interactive nature of the platform fosters a dynamic storytelling environment, where players' decisions directly influence the plot's direction and conclusion. As players navigate through the adventures, the API continuously adapts the narrative, creating a personalized experience that keeps them engaged and invested in the story.
 
-Overall, Gemini API enhances the roleplaying experience by seamlessly integrating text generation, image creation, and sentiment analysis, making it an invaluable resource for developers looking to create captivating and responsive storytelling applications. The possibilities for adventure are truly endless, limited only by the imagination of the players.
+Overall, Gemini API enhances the roleplaying experience by seamlessly integrating text generation, image creation and sentiment analysis, making it an invaluable resource for developers looking to create captivating and responsive storytelling applications. The possibilities for adventure are truly endless, limited only by the imagination of the players.
+
+## Setup Guide
+- You can always try the online demo hosted on HuggingFace through [here](https://ikmalsaid-mindful-escapades.hf.space/)
+- Local installation is supported but you need to provide your own:
+  - Gemini API key.
+  - Image generation provider URL.
+  - Image generation provider API key.
+- Once acquired, follow these steps:
+  - Clone this repository: `git clone https://github.com/ikmalsaid/mindful-escapades.git`
+  - Create a new python environment: `python -m venv venv`
+  - Create a copy of the `.env.example` file and rename it to `.env`
+  - Fill in the required information inside the `.env` file
+  - Launch the app using: `python app.py`
 
 ## How to Use
 - Step 1: Type what kind of story that you want in the textbox at the lower part of the app.
@@ -16,4 +29,4 @@ Overall, Gemini API enhances the roleplaying experience by seamlessly integratin
 
 ## Tips and Release Notes
 - You can always change the image style and the type of voice according to your preferences.
-- This app runs in single mode. If you encounter a weird behavior, you can restart the story by pressing the 'Reset All' button.
+- This app operates in single mode. To restart a new story if you experience any strange behavior, press the 'Reset All' button.
