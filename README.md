@@ -1,6 +1,8 @@
 # 💬 Mindful Escapades
 Turn your words into playable adventures! #builtwithgemini
 
+[Watch the promotional video on YouTube](https://www.youtube.com/watch?v=u2PPxwKESUs)
+
 ## How Gemini API Empowers This App
 Gemini API is a powerful tool that drives a web application designed for creating immersive roleplay text adventures. It transforms user input into engaging narratives, enabling players to embark on limitless storytelling experiences. The API not only generates detailed image prompts for AI-driven visual content but also analyzes player responses to gauge their sentiments. This sentiment analysis plays a crucial role in shaping the narrative, allowing the story to evolve based on player choices and actions.
 
